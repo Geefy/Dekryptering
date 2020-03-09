@@ -17,15 +17,9 @@ namespace Dekryptering
         static void Main(string[] args)
         {
             MakeVigSquare();
-            var rowCount = vigSquare.GetLength(0);
-            var colCount = vigSquare.GetLength(1);
-            for (int row = 0; row < rowCount; row++)
-            {
-                for (int col = 0; col < colCount; col++)
-                    Console.Write(String.Format("{0}\t", vigSquare[row, col]));
-                Console.WriteLine();
-            }
-            Decrypt(Encrypt(encryptionText, key), key);
+            Console.WriteLine("Text to encrypt: " + encryptionText +" with key: " + key);
+            Console.WriteLine("Text encrypted: " + Encrypt(encryptionText, key));
+            Console.WriteLine("Text decrypted: " + Decrypt(Encrypt(encryptionText, key), key));
             Console.Read();
 
 
