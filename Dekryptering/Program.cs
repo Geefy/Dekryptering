@@ -83,12 +83,12 @@ namespace Dekryptering
                 if (textIndex - passIndex < 0)
                 {
 
-                    decryptedText += vigSquare[0, (textIndex + 26) - passIndex];
+                    decryptedText += alphabet[(textIndex + 26) - passIndex];
                 }
                 else
                 {
 
-                    decryptedText += vigSquare[0, textIndex - passIndex];
+                    decryptedText += alphabet[textIndex - passIndex];
                 }
 
                 passIndexer++;
